@@ -1,0 +1,55 @@
+---
+title: Homepage
+headerStyle: clean
+startUrl: https://homepage.{{HOMEPAGE_VAR_DOMAIN}}
+favicon: /images/favicon.ico
+background:
+  image: /images/wallpaper.png
+  blur: md
+  saturate: 50
+  brightness: 50
+  opacity: 70
+theme: dark
+color: slate
+statusStyle: dot
+useEqualHeights: true
+quicklaunch:
+  searchDescriptions: true
+  hideInternetSearch: true
+  showSearchSuggestions: true
+  hideVisitURL: true
+hideVersion: false
+layout:
+  Quick:
+    header: false
+    style: column
+  Access:
+    header: false
+    style: column
+  Calendar:
+    header: false
+    style: column
+  Infrastructure:
+    header: true
+    style: row
+    columns: 4
+  Monitoring:
+    header: true
+    style: row
+    columns: 4
+  Internet of Things:
+    header: true
+    style: row
+    columns: 4
+  Media:
+    header: true
+    style: row
+    columns: 4
+  Development:
+    header: true
+    style: row
+    columns: 4
+  Miscellaneous:
+    header: true
+    style: row
+    columns: 4

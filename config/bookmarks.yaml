@@ -1,0 +1,59 @@
+---
+- Quick:
+    - YouTube:
+        - icon: youtube.svg
+          href: https://youtube.com
+          description: Video Monopoly
+    - Github:
+        - icon: github-light.svg
+          href: https://github.com
+          description: Code hosting platform
+    - Hackaday:
+        - icon: /images/hackaday.png
+          href: https://hackaday.com
+          description: Hardware development news
+    - CNX Software:
+        - icon: /images/cnxsoft.png
+          href: https://www.cnx-software.com
+          description: Embedded systems news
+    - Reddit:
+        - icon: reddit.svg
+          href: https://www.reddit.com
+          description: Social news platform
+    - Amazon:
+        - icon: amazon.svg
+          href: https://www.amazon.com
+          description: Online Shopping
+    - eBay:
+        - icon: ebay.svg
+          href: https://www.ebay.com
+          description: Online marketplace
+- Access:
+    - ChatGPT:
+        - icon: chatgpt.svg
+          href: https://chat.openai.com/
+          description: AI Chat Bot
+    - Proton Mail:
+        - icon: proton-mail.svg
+          href: https://mail.proton.me
+          description: Encrypted Email
+    - Docker Hub:
+        - icon: docker.svg
+          href: https://hub.docker.com
+          description: Official Docker repository
+    - 1337x:
+        - icon: /images/x.png
+          href: https://1337x.to
+          description: Torrent search engine
+    - Homepage:
+        - icon: homepage.png
+          href: https://gethomepage.dev/main/
+          description: Homepage Documentation
+    - Dashboard Icons:
+        - icon: github-light.svg
+          href: https://github.com/walkxcode/dashboard-icons
+          description: Icon Repository
+    - LXC Scripts:
+        - icon: github-light.svg
+          href: https://helper-scripts.com/scripts
+          description: Proxmox VE Helper Scripts

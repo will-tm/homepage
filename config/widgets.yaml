@@ -1,0 +1,13 @@
+---
+- openmeteo:
+    label: {{HOMEPAGE_VAR_OPENMETEO_LABEL}}
+    lattitude: {{HOMEPAGE_VAR_OPENMETEO_LATITUDE}}
+    longitude: {{HOMEPAGE_VAR_OPENMETEO_LONGITUDE}}
+    timezone: {{HOMEPAGE_VAR_TIMEZONE}}
+    units: metric
+    cache: 15
+- search:
+    provider: google
+    target: _blank
+    focus: true
+    showSearchSuggestions: true

@@ -1,0 +1,410 @@
+---
+- Calendar:
+    - Media Calendar:
+        widget:
+          type: calendar
+          firstDayInWeek: monday
+          view: monthly
+          maxEvents: 10
+          showTime: true
+          timezone: {{HOMEPAGE_VAR_TIMEZONE}}
+          integrations:
+            - type: sonarr
+              service_group: Media
+              service_name: Sonarr
+              color: teal
+              params:
+                unmonitored: true
+            - type: radarr
+              service_group: Media
+              service_name: Radarr
+              color: yellow
+              params:
+                unmonitored: true
+            - type: lidarr
+              service_group: Media
+              service_name: Lidarr
+              color: green
+              params:
+                unmonitored: true
+            - type: readarr
+              service_group: Media
+              service_name: Readarr
+              color: red
+              params:
+                unmonitored: true
+
+- Infrastructure:
+    - Proxmox:
+        icon: proxmox.svg
+        href: https://apollo.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://apollo.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Apollo
+        widget:
+          type: proxmox
+          url: https://apollo.{{HOMEPAGE_VAR_DOMAIN}}
+          username: {{HOMEPAGE_VAR_PROXMOX_USER}}
+          password: {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
+          node: apollo
+          
+    - Proxmox:
+        icon: proxmox.svg
+        href: https://artemis.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://artemis.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Artemis
+        widget:
+          type: proxmox
+          url: https://artemis.{{HOMEPAGE_VAR_DOMAIN}}
+          username: {{HOMEPAGE_VAR_PROXMOX_USER}}
+          password: {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
+          node: artemis
+
+    - Proxmox:
+        icon: proxmox.svg
+        href: https://hermes.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://hermes.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Hermes
+        widget:
+          type: proxmox
+          url: https://hermes.{{HOMEPAGE_VAR_DOMAIN}}
+          username: {{HOMEPAGE_VAR_PROXMOX_USER}}
+          password: {{HOMEPAGE_VAR_PROXMOX_API_KEY}}
+          node: hermes
+
+    - TrueNAS:
+        icon: truenas.svg
+        href: https://truenas.{{HOMEPAGE_VAR_DOMAIN}}
+        ping: https://truenas.{{HOMEPAGE_VAR_DOMAIN}}
+        description: TrueNAS Scale
+        widget:
+          type: truenas
+          url: https://truenas.{{HOMEPAGE_VAR_DOMAIN}}
+          key: {{HOMEPAGE_VAR_TRUENAS_API_KEY}}
+          enablePools: true 
+          nasType: scale
+
+    - Proxmox Backup:
+        icon: proxmox.svg
+        href: https://pbs.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://pbs.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Proxmox Backup
+        widget:
+          type: proxmoxbackupserver
+          url: https://pbs.{{HOMEPAGE_VAR_DOMAIN}}
+          username: {{HOMEPAGE_VAR_PROXMOXBACKUP_USER}}
+          password: {{HOMEPAGE_VAR_PROXMOXBACKUP_API_KEY}}
+
+    - Proxmox Backup Synology:
+        icon: proxmox.svg
+        href: https://pbs-synology.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://pbs-synology.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Proxmox Backup
+        widget:
+          type: proxmoxbackupserver
+          url: https://pbs-synology.{{HOMEPAGE_VAR_DOMAIN}}
+          username: {{HOMEPAGE_VAR_PROXMOXBACKUPSYNO_USER}}
+          password: {{HOMEPAGE_VAR_PROXMOXBACKUPSYNO_API_KEY}}
+
+    - Unifi Controller:
+        icon: ubiquiti-unifi.svg
+        href: https://unifi-controller.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://unifi-controller.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Network management and monitoring.
+        widget:
+          type: unifi
+          url: https://unifi-controller.{{HOMEPAGE_VAR_DOMAIN}}
+          username: {{HOMEPAGE_VAR_UNIFI_USER}}
+          password: {{HOMEPAGE_VAR_UNIFI_PASSWORD}}
+
+    - Synology:
+        icon: synology-dsm.svg
+        href: https://synology.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://synology.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Diskstation
+        widget:
+          type: diskstation
+          url: https://synology.{{HOMEPAGE_VAR_DOMAIN}}
+          username: {{HOMEPAGE_VAR_SYNOLOGY_USER}}
+          password: {{HOMEPAGE_VAR_SYNOLOGY_PASSWORD}}
+
+    - AdGuard NS1:
+        icon: adguard-home.svg
+        href: https://adguard-ns1.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://adguard-ns1.{{HOMEPAGE_VAR_DOMAIN}}
+        description: DNS ad-blocking and privacy protection.
+        widget:
+          type: adguard
+          url: https://adguard-ns1.{{HOMEPAGE_VAR_DOMAIN}}
+          username: {{HOMEPAGE_VAR_ADGUARD_USER}}
+          password: {{HOMEPAGE_VAR_ADGUARD_PASSWORD}}
+
+    - AdGuard NS2:
+        icon: adguard-home.svg
+        href: https://adguard-ns2.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://adguard-ns2.{{HOMEPAGE_VAR_DOMAIN}}
+        description: DNS ad-blocking and privacy protection.
+        widget:
+          type: adguard
+          url: https://adguard-ns2.{{HOMEPAGE_VAR_DOMAIN}}
+          username: {{HOMEPAGE_VAR_ADGUARD_USER}}
+          password: {{HOMEPAGE_VAR_ADGUARD_PASSWORD}}
+
+    - AdGuard NS3:
+        icon: adguard-home.svg
+        href: https://adguard-ns3.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://adguard-ns3.{{HOMEPAGE_VAR_DOMAIN}}
+        description: DNS ad-blocking and privacy protection.
+        widget:
+          type: adguard
+          url: https://adguard-ns3.{{HOMEPAGE_VAR_DOMAIN}}
+          username: {{HOMEPAGE_VAR_ADGUARD_USER}}
+          password: {{HOMEPAGE_VAR_ADGUARD_PASSWORD}}
+
+    - Nginx:
+        icon: nginx.svg
+        href: https://nginx.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://nginx.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Web server and reverse proxy.
+        widget:
+          type: npm
+          url: https://nginx.{{HOMEPAGE_VAR_DOMAIN}}
+          username: {{HOMEPAGE_VAR_NPM_USER}}
+          password: {{HOMEPAGE_VAR_NPM_PASSWORD}}
+
+- Monitoring:
+    - Uptime Kuma:
+        icon: uptime-kuma.svg
+        href: https://kuma.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://kuma.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Status Monitor
+        widget:
+          type: uptimekuma
+          url: https://kuma.{{HOMEPAGE_VAR_DOMAIN}}
+          slug: home
+
+    - Tautulli:
+        icon: tautulli.svg
+        href: https://tautulli.{{HOMEPAGE_VAR_DOMAIN}}
+        ping: https://tautulli.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Plex server Monitoring.
+        widget:
+          type: tautulli
+          url: https://tautulli.{{HOMEPAGE_VAR_DOMAIN}}
+          key: {{HOMEPAGE_VAR_TAUTULLI_API_KEY}}
+
+    - Grafana:
+        icon: grafana.svg
+        href: https://grafana.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://grafana.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Metrics Monitoring
+
+    - Semaphore:
+        icon: semaphore.svg
+        href: https://semaphore.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://semaphore.{{HOMEPAGE_VAR_DOMAIN}}
+        description: CI/CD tool for projects.
+
+- Internet of Things:
+    - Home Assistant:
+        icon: home-assistant.svg
+        href: https://homeassistant.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://homeassistant.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Home Automation
+        widget:
+          type: homeassistant
+          url: https://homeassistant.{{HOMEPAGE_VAR_DOMAIN}}
+          key: {{HOMEPAGE_VAR_HOMEASSISTANT_API_KEY}}
+
+    - Homebridge:
+        icon: homebridge.svg
+        href: https://homebridge.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://homebridge.{{HOMEPAGE_VAR_DOMAIN}}
+        description: HomeKit bridge for non-HomeKit devices.
+        widget:
+          type: homebridge
+          url: https://homebridge.{{HOMEPAGE_VAR_DOMAIN}}
+          username: {{HOMEPAGE_VAR_HOMEBRIDGE_USER}}
+          password: {{HOMEPAGE_VAR_HOMEBRIDGE_PASSWORD}}
+
+    - Frigate:
+        icon: frigate.svg
+        href: https://frigate.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://frigate.{{HOMEPAGE_VAR_DOMAIN}}
+        description: NVR with AI object detection.
+        widget:
+          type: frigate
+          url: https://frigate.{{HOMEPAGE_VAR_DOMAIN}}
+
+    - Zigbee2MQTT:
+        icon: zigbee2mqtt.svg
+        href: https://zigbee2mqtt.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://zigbee2mqtt.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Zigbee to MQTT bridge.
+
+- Development:
+    - GitLab:
+        icon: gitlab.svg
+        href: https://gitlab.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://gitlab.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Git repository management and CI/CD.
+        widget:
+          type: gitlab
+          url: https://gitlab.{{HOMEPAGE_VAR_DOMAIN}}
+          key: {{HOMEPAGE_VAR_GITLAB_API_KEY}}
+          user_id: {{HOMEPAGE_VAR_GITLAB_USER}}
+
+    - Code Server:
+        icon: vscode.svg
+        href: https://code-server.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://code-server.{{HOMEPAGE_VAR_DOMAIN}}
+        description: VS Code in the browser.
+
+- Miscellaneous:
+    - Minecraft Server:
+        icon: minecraft.svg
+        ping: {{HOMEPAGE_VAR_MINECRAFT_SERVER_IP}}
+        description: Minecraft game server.
+        widget:
+          type: minecraft
+          url: udp://{{HOMEPAGE_VAR_MINECRAFT_SERVER_IP}}:25565
+
+    - Invoice Ninja:
+        icon: invoice-ninja.svg
+        href: https://invoice.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://invoice.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Invoicing and time tracking.
+
+    - Invidious:
+        icon: invidious.svg
+        href: https://invidious.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://invidious.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Alternative YouTube front-end.
+
+    - Vaultwarden:
+        icon: vaultwarden-light.svg
+        href: https://vault.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://vault.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Password manager (Bitwarden-compatible).
+
+    - Netboot XYZ:
+        icon: netboot.svg
+        href: https://netboot.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://netboot.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Network booting utility.
+
+    - Actual:
+        icon: actual-budget.svg
+        href: https://actual.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://actual.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Budgeting and finance tool.
+
+    - IT Tools:
+        icon: it-tools-light.svg
+        href: https://tools.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://tools.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Collection of IT-related utilities.
+
+    - ntfy:
+        icon: ntfy.svg
+        href: https://ntfy.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://ntfy.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Push notifications service.
+
+    - yanren.org:
+        icon: ghost-light.png
+        href: https://yanren.org
+        siteMonitor: https://yanren.org
+        description: Yan's personal website.
+
+    - Plausible:
+        icon: plausible.svg
+        href: https://plausible.yanren.org
+        siteMonitor: https://plausible.yanren.org
+        description: Privacy-focused analytics.
+
+- Media:
+    - Plex:
+        icon: plex.svg
+        href: https://plex.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://plex.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Media server and streaming.
+        widget:
+          type: plex
+          url: https://plex.{{HOMEPAGE_VAR_DOMAIN}}
+          key: {{HOMEPAGE_VAR_PLEX_API_KEY}}
+
+    - qBittorrent:
+        icon: qbittorrent.svg
+        href: https://qbittorrent.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://qbittorrent.{{HOMEPAGE_VAR_DOMAIN}}
+        description: BitTorrent client.
+        widget:
+          type: qbittorrent
+          url: https://qbittorrent.{{HOMEPAGE_VAR_DOMAIN}}
+          username: {{HOMEPAGE_VAR_QBITTORRENT_USER}}
+          password: {{HOMEPAGE_VAR_QBITTORRENT_PASSWORD}}
+
+    - Overseerr:
+        icon: overseerr.svg
+        href: https://overseerr.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://overseerr.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Media request management.
+        widget:
+          type: overseerr
+          url: https://overseerr.{{HOMEPAGE_VAR_DOMAIN}}
+          key: {{HOMEPAGE_VAR_OVERSEERR_API_KEY}}
+
+    - Sonarr:
+        icon: sonarr.svg
+        href: https://sonarr.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://sonarr.{{HOMEPAGE_VAR_DOMAIN}}
+        description: TV show download automation.
+        widget:
+          type: sonarr
+          url: https://sonarr.{{HOMEPAGE_VAR_DOMAIN}}
+          key: {{HOMEPAGE_VAR_SONARR_API_KEY}}
+          enableQueue: true
+
+    - Lidarr:
+        icon: lidarr.svg
+        href: https://lidarr.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://lidarr.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Music download automation.
+        widget:
+          type: lidarr
+          url: https://lidarr.{{HOMEPAGE_VAR_DOMAIN}}
+          key: {{HOMEPAGE_VAR_LIDARR_API_KEY}}
+          enableQueue: true
+
+    - Radarr:
+        icon: radarr.svg
+        href: https://radarr.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://radarr.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Movie download automation.
+        widget:
+          type: radarr
+          url: https://radarr.{{HOMEPAGE_VAR_DOMAIN}}
+          key: {{HOMEPAGE_VAR_RADARR_API_KEY}}
+          enableQueue: true
+
+    - Readarr:
+        icon: readarr.svg
+        href: https://readarr.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://readarr.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Books download automation.
+        widget:
+          type: readarr
+          url: https://readarr.{{HOMEPAGE_VAR_DOMAIN}}
+          key: {{HOMEPAGE_VAR_READARR_API_KEY}}
+          enableQueue: true
+
+    - Prowlarr:
+        icon: prowlarr.svg
+        href: https://prowlarr.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://prowlarr.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Index Pull Automation
+        widget:
+          type: prowlarr
+          url: https://prowlarr.{{HOMEPAGE_VAR_DOMAIN}}
+          key: {{HOMEPAGE_VAR_PROWLOARR_API_KEY}}
+          enableQueue: true
