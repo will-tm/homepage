@@ -344,6 +344,17 @@
           username: {{HOMEPAGE_VAR_QBITTORRENT_USER}}
           password: {{HOMEPAGE_VAR_QBITTORRENT_PASSWORD}}
 
+    - NZBget:
+        icon: nzbget.svg
+        href: https://nzbget.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://nzbget.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Usenet downloader
+        widget:
+          type: nzbget
+          url: https://nzbget.{{HOMEPAGE_VAR_DOMAIN}}
+          username: {{HOMEPAGE_VAR_NZBGET_USER}}
+          password: {{HOMEPAGE_VAR_NZBGET_PASSWORD}}
+
     - Overseerr:
         icon: overseerr.svg
         href: https://overseerr.{{HOMEPAGE_VAR_DOMAIN}}
