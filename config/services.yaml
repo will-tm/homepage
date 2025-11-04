@@ -75,7 +75,7 @@
         icon: truenas.svg
         href: https://truenas.{{HOMEPAGE_VAR_DOMAIN}}
         ping: https://truenas.{{HOMEPAGE_VAR_DOMAIN}}
-        description: TrueNAS Scale
+        description: TrueNAS Scale.
         widget:
           type: truenas
           url: https://truenas.{{HOMEPAGE_VAR_DOMAIN}}
@@ -87,7 +87,7 @@
         icon: proxmox.svg
         href: https://pbs.{{HOMEPAGE_VAR_DOMAIN}}
         siteMonitor: https://pbs.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Proxmox Backup
+        description: Proxmox Backup.
         widget:
           type: proxmoxbackupserver
           url: https://pbs.{{HOMEPAGE_VAR_DOMAIN}}
@@ -98,7 +98,7 @@
         icon: proxmox.svg
         href: https://pbs-synology.{{HOMEPAGE_VAR_DOMAIN}}
         siteMonitor: https://pbs-synology.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Proxmox Backup
+        description: Proxmox Backup.
         widget:
           type: proxmoxbackupserver
           url: https://pbs-synology.{{HOMEPAGE_VAR_DOMAIN}}
@@ -120,7 +120,7 @@
         icon: synology-dsm.svg
         href: https://synology.{{HOMEPAGE_VAR_DOMAIN}}
         siteMonitor: https://synology.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Diskstation
+        description: Diskstation.
         widget:
           type: diskstation
           url: https://synology.{{HOMEPAGE_VAR_DOMAIN}}
@@ -176,11 +176,29 @@
         icon: uptime-kuma.svg
         href: https://kuma.{{HOMEPAGE_VAR_DOMAIN}}
         siteMonitor: https://kuma.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Status Monitor
+        description: Status Monitor.
         widget:
           type: uptimekuma
           url: https://kuma.{{HOMEPAGE_VAR_DOMAIN}}
           slug: home
+
+    - Grafana:
+        icon: grafana.svg
+        href: https://grafana.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://grafana.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Metrics Monitoring.
+
+    - Semaphore:
+        icon: semaphore.svg
+        href: https://semaphore.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://semaphore.{{HOMEPAGE_VAR_DOMAIN}}
+        description: CI/CD tool for projects.
+
+    - Pulse:
+        icon: pulse.svg
+        href: https://pulse.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://pulse.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Proxmox VE, PBS, and Docker monitoring.
 
     - Tautulli:
         icon: tautulli.svg
@@ -192,24 +210,12 @@
           url: https://tautulli.{{HOMEPAGE_VAR_DOMAIN}}
           key: {{HOMEPAGE_VAR_TAUTULLI_API_KEY}}
 
-    - Grafana:
-        icon: grafana.svg
-        href: https://grafana.{{HOMEPAGE_VAR_DOMAIN}}
-        siteMonitor: https://grafana.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Metrics Monitoring
-
-    - Semaphore:
-        icon: semaphore.svg
-        href: https://semaphore.{{HOMEPAGE_VAR_DOMAIN}}
-        siteMonitor: https://semaphore.{{HOMEPAGE_VAR_DOMAIN}}
-        description: CI/CD tool for projects.
-
 - Internet of Things:
     - Home Assistant:
         icon: home-assistant.svg
         href: https://homeassistant.{{HOMEPAGE_VAR_DOMAIN}}
         siteMonitor: https://homeassistant.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Home Automation
+        description: Home Automation.
         widget:
           type: homeassistant
           url: https://homeassistant.{{HOMEPAGE_VAR_DOMAIN}}
@@ -258,6 +264,12 @@
         href: https://code-server.{{HOMEPAGE_VAR_DOMAIN}}
         siteMonitor: https://code-server.{{HOMEPAGE_VAR_DOMAIN}}
         description: VS Code in the browser.
+
+    - n8n:
+        icon: https://raw.githubusercontent.com/homarr-labs/dashboard-icons/refs/heads/main/svg/n8n.svg
+        href: https://n8n.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://n8n.{{HOMEPAGE_VAR_DOMAIN}}
+        description: AI Workflow Automation Platform & Tools.
 
 - Miscellaneous:
     - Minecraft Server:
@@ -348,7 +360,7 @@
         icon: nzbget.svg
         href: https://nzbget.{{HOMEPAGE_VAR_DOMAIN}}
         siteMonitor: https://nzbget.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Usenet downloader
+        description: Usenet downloader.
         widget:
           type: nzbget
           url: https://nzbget.{{HOMEPAGE_VAR_DOMAIN}}
@@ -413,9 +425,20 @@
         icon: prowlarr.svg
         href: https://prowlarr.{{HOMEPAGE_VAR_DOMAIN}}
         siteMonitor: https://prowlarr.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Index Pull Automation
+        description: Index Pull Automation.
         widget:
           type: prowlarr
           url: https://prowlarr.{{HOMEPAGE_VAR_DOMAIN}}
           key: {{HOMEPAGE_VAR_PROWLOARR_API_KEY}}
           enableQueue: true
+
+    - Immich:
+        icon: immich.svg
+        href: https://immich.{{HOMEPAGE_VAR_DOMAIN}}
+        siteMonitor: https://immich.{{HOMEPAGE_VAR_DOMAIN}}
+        description: Photo and video management.
+        widget:
+          type: immich
+          url: https://immich.{{HOMEPAGE_VAR_DOMAIN}}
+          key: {{HOMEPAGE_VAR_IMMICH_API_KEY}}
+          version: 2
