@@ -410,17 +410,6 @@
           key: {{HOMEPAGE_VAR_RADARR_API_KEY}}
           enableQueue: true
 
-    - Readarr:
-        icon: readarr.svg
-        href: https://readarr.{{HOMEPAGE_VAR_DOMAIN}}
-        siteMonitor: https://readarr.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Books download automation.
-        widget:
-          type: readarr
-          url: https://readarr.{{HOMEPAGE_VAR_DOMAIN}}
-          key: {{HOMEPAGE_VAR_READARR_API_KEY}}
-          enableQueue: true
-
     - Prowlarr:
         icon: prowlarr.svg
         href: https://prowlarr.{{HOMEPAGE_VAR_DOMAIN}}
