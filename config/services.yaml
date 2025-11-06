@@ -27,12 +27,6 @@
               color: green
               params:
                 unmonitored: true
-            - type: readarr
-              service_group: Media
-              service_name: Readarr
-              color: red
-              params:
-                unmonitored: true
 
 - Infrastructure:
     - Proxmox:
@@ -160,16 +154,14 @@
           username: {{HOMEPAGE_VAR_ADGUARD_USER}}
           password: {{HOMEPAGE_VAR_ADGUARD_PASSWORD}}
 
-    - Nginx:
-        icon: nginx.svg
-        href: https://nginx.{{HOMEPAGE_VAR_DOMAIN}}
-        siteMonitor: https://nginx.{{HOMEPAGE_VAR_DOMAIN}}
-        description: Web server and reverse proxy.
+    - Traefik:
+        icon: traefik.svg
+        href: https://traefik.{{HOMEPAGE_VAR_DOMAIN}}/dashboard
+        siteMonitor: https://traefik.{{HOMEPAGE_VAR_DOMAIN}}
+        description: HTTP reverse proxy and load balancer.
         widget:
-          type: npm
-          url: https://nginx.{{HOMEPAGE_VAR_DOMAIN}}
-          username: {{HOMEPAGE_VAR_NPM_USER}}
-          password: {{HOMEPAGE_VAR_NPM_PASSWORD}}
+          type: traefik
+          url: https://traefik.{{HOMEPAGE_VAR_DOMAIN}}
 
 - Monitoring:
     - Uptime Kuma:

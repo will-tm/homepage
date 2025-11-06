@@ -28,11 +28,19 @@
         - icon: ebay.svg
           href: https://www.ebay.com
           description: Online marketplace
+    - Fidelity:
+        - icon: https://digital.fidelity.com/favicon.ico
+          href: https://digital.fidelity.com
+          description: Investment
 - Access:
     - ChatGPT:
         - icon: chatgpt.svg
-          href: https://chat.openai.com/
+          href: https://chat.com
           description: AI Chat Bot
+    - Claude:
+        - icon: claude-ai.svg
+          href: https://claude.ai
+          description: Coding AI Chat Bot
     - Proton Mail:
         - icon: proton-mail.svg
           href: https://mail.proton.me
@@ -47,7 +55,7 @@
           description: Torrent search engine
     - Homepage:
         - icon: homepage.png
-          href: https://gethomepage.dev/main/
+          href: https://gethomepage.dev
           description: Homepage Documentation
     - Dashboard Icons:
         - icon: github-light.svg
